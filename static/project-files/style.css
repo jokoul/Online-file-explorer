@@ -1,0 +1,55 @@
+/*GENERAL STYLE*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*BreadCrumb*/
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.breadcrumb {
+  background-color: #515161;
+  border-radius: 0;
+}
+
+a {
+  color: #aebd38 !important; /*to overwrite bootstrap 5 default scss style defined for links*/
+  text-decoration: none !important;
+}
+
+/*TABLE*/
+.table {
+  margin-top: 7rem;
+  color: #68829e !important;
+  margin: 8rem auto;
+}
+thead {
+  background-color: #68829e;
+  color: white;
+  cursor: pointer;
+}
+i {
+  font-size: 1.2rem;
+  color: #68829e;
+}
+tbody {
+  display: block; /*to display scroll everytime even if there is no enough element to fill the height*/
+  height: 20rem;
+  overflow-y: scroll;
+}
+thead,
+tbody tr {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+/*FOOTER*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+}
