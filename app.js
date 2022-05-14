@@ -5,7 +5,7 @@ const http = require("http");
 //file imports
 const respond = require("./lib/respond");
 //connection settings
-const port = process.env.port || 3000; //first we check environment variable if it's not set then we use 3000 to set it. Useful when deploying on heroku for instance.
+const port = process.env.PORT || 3000; //first we check environment variable if it's not set then we use 3000 to set it. Useful when deploying on heroku for instance.
 //Create server
 const server = http.createServer(respond);
 //listen to client requests on the specific port, the port should be available
