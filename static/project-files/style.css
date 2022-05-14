@@ -25,7 +25,7 @@ a {
 /*TABLE*/
 .table {
   margin-top: 7rem;
-  color: #68829e !important;
+  color: #68829e /*!important*/;
   margin: 8rem auto;
 }
 thead {
@@ -33,7 +33,7 @@ thead {
   color: white;
   cursor: pointer;
 }
-i {
+tbody i {
   font-size: 1.2rem;
   color: #68829e;
 }
