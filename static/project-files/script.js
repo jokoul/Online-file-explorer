@@ -28,8 +28,8 @@
 //Order status (good practise to create object instead of lots of variable that make our code more readable)
 const sortStatus = {
   name: "none", //none,up,down
-  // size:,
-  // time:
+  size: "none", //none,up,down
+  time: "none", //none,up,down
 };
 
 //loop through children of tbody with jQuery
@@ -58,18 +58,27 @@ children_array.forEach((element) => {
 });
 //console.log(items);
 
-const sort_name = (items, option) => {
+const sort = (items, option, type) => {
   items.sort((item1, item2) => {
+    let value1, value2;
     //by default, the order is sort in ascending order
-    const name1 = item1.name.toUpperCase(); //we put all the name in uppercase before comparison to avoid mistake
-    const name2 = item2.name.toUpperCase();
-    if (name1 < name2) {
+    if (type === "name") {
+      value1 = item1.name.toUpperCase(); //we put all the name in uppercase before comparison to avoid mistake
+      value2 = item2.name.toUpperCase();
+    } else if (type === "size") {
+      value1 = item1.size;
+      value2 = item2.size;
+    } else {
+      value1 = item1.time;
+      value2 = item2.time;
+    }
+    if (value1 < value2) {
       return -1;
     }
-    if (name1 > name2) {
+    if (value1 > value2) {
       return 1;
     }
-    //equal names
+    //equal values
     return 0;
   });
   if (option === "down") {
@@ -96,25 +105,47 @@ const fill_table_body = (items) => {
 //fill_table_body(items); //we fill table with a content made with reorder items array
 
 //event listener
-document.getElementById("name").addEventListener("click", () => {
-  //   if (sortStatus.name in ["none", "down"]) {
-  //     //sort in ascending order
-  //     sort_name(items, "up"); //rather than having two fn sort_name_up and ...down, we can refactorize in one with second parameter for order.
-  //   }
-  //   if (sortStatus.name === "up") {
-  //     //sort in descending order
-  //     sort_name(items, "down");
-  //   }
-  //   document.getElementById("name").style.backgroundColor = "red";
-  //other way to better write the code
-  if (["none", "down"].includes(sortStatus.name)) {
-    //sort in ascending order
-    sort_name(items, "up");
-    sortStatus.name = "up";
-  } else if (sortStatus.name === "up") {
-    //sort in descending order
-    sort_name(items, "down");
-    sortStatus.name = "down";
+document.getElementById("table_head_row").addEventListener("click", (event) => {
+  if (event.target) {
+    //clear icon with jQuery
+    $("i").remove();
+
+    if (["none", "down"].includes(sortStatus[event.target.id])) {
+      //sort in ascending order
+      sort(items, "up", "name");
+      sortStatus[event.target.id] = "up";
+      //add icon
+      event.target.innerHTML += ' <i class="fas fa-circle-arrow-up"></i>';
+    } else if (sortStatus[event.target.id] === "up") {
+      //sort in descending order
+      sort(items, "down", "name");
+      sortStatus[event.target.id] = "down";
+      //add icon
+      event.target.innerHTML += ' <i class="fas fa-circle-arrow-down"></i>';
+    }
+
+    fill_table_body(items);
   }
-  fill_table_body(items);
 });
+// document.getElementById("name").addEventListener("click", () => {
+//   //   if (sortStatus.name in ["none", "down"]) {
+//   //     //sort in ascending order
+//   //     sort_name(items, "up"); //rather than having two fn sort_name_up and ...down, we can refactorize in one with second parameter for order.
+//   //   }
+//   //   if (sortStatus.name === "up") {
+//   //     //sort in descending order
+//   //     sort_name(items, "down");
+//   //   }
+//   //   document.getElementById("name").style.backgroundColor = "red";
+//   //other way to better write the code
+//   if (["none", "down"].includes(sortStatus.name)) {
+//     //sort in ascending order
+//     sort_name(items, "up");
+//     sortStatus.name = "up";
+//   } else if (sortStatus.name === "up") {
+//     //sort in descending order
+//     sort_name(items, "down");
+//     sortStatus.name = "down";
+//   }
+//   fill_table_body(items);
+// });
