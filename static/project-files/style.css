@@ -14,7 +14,9 @@ nav {
   background-color: #515161;
   border-radius: 0;
 }
-
+.breadcrumb .active {
+  color: aliceblue !important;
+}
 a {
   color: #aebd38 !important; /*to overwrite bootstrap 5 default scss style defined for links*/
   text-decoration: none !important;

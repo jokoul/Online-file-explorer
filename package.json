@@ -1,0 +1,25 @@
+{
+  "name": "online-file-explorer",
+  "version": "1.0.0",
+  "description": "app.js",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/jokoul/Online-file-explorer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jokoul/Online-file-explorer/issues"
+  },
+  "homepage": "https://github.com/jokoul/Online-file-explorer#readme",
+  "dependencies": {
+    "fast-folder-size": "^1.6.2"
+  }
+}
