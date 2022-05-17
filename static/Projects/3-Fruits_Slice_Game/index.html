@@ -1,0 +1,89 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fruits Slice Game</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=yes"
+    />
+    <!--Ajout d'un favicon-->
+    <link
+      rel="shorcut icon"
+      type="image/png"
+      href="./img/favicon_io/LogoMakr.png"
+    />
+    <link rel="stylesheet" href="styling.css" />
+    <!--CSS Component of JQUERY UI put here just in case it is needed later-->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <!--My fontawesome kit code-->
+    <script
+      src="https://kit.fontawesome.com/52339f9582.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="h1"><a href="index.html">Fruit Slice Game</a></h1>
+      <h2>Try to catch the most fruits that you can and enjoy the game !</h2>
+    </header>
+    <div id="container">
+      <div id="score">Score: <span id="scorevalue">0</span></div>
+      <div id="trialsLeft"></div>
+      <div id="correct">Correct</div>
+      <div id="wrong">Try again</div>
+      <div id="fruitsContainer">
+        <img id="fruit1" class="fruit" />
+      </div>
+      <div id="instruction">
+        Catch fruits by double clicking or mouseover them
+      </div>
+
+      <div id="startreset">Start Game</div>
+      <div id="gameOver"></div>
+    </div>
+    <audio id="slicesound">
+      <source src="./audio/19312__martian__classic-double-swwosh.mp3" />
+      <source src="./audio/19312__martian__classic-double-swwosh.ogg" />
+    </audio>
+    <footer class="footer">
+      <p>Fruit Slice Game, Copyright &copy; 2022</p>
+      <div>
+        <ul class="social-media">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/joan-kouloumba-570a7680/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/joanKouloumba" target="_blank"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/jokoul" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+        </ul>
+        <p>
+          <a
+            href="https://joan-kouloumba.in/professional-site/index.html#achievements"
+            >Visit more site like this on the professional site.</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--JQUERY UI  come after Jquery library because it needs some function from jquery lib to work-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./jquery.js"></script>
+  </body>
+</html>

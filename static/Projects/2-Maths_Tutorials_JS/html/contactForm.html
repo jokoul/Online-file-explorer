@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Maths Website - signup</title>
+    <!--Ajout d'un favicon-->
+    <link
+      rel="shorcut icon"
+      type="image/png"
+      href="../images/favicon_io/LogoMakr.png"
+    />
+    <!--"user-scalable=yes" allow user to zoom-in and zoom-out -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <link rel="stylesheet" href="../styling.css" />
+    <!--My fontawesome kit code-->
+    <script
+      src="https://kit.fontawesome.com/52339f9582.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">
+        <div id="brand">
+          <h1>
+            <!--good practice to place brand in heading-->
+            <a href="../index.html">Maths the Fun way</a>
+          </h1>
+        </div>
+        <div id="searchBox">
+          <form class="formSearch" method="get">
+            <!--get method allow to pass data via url as key=value pair-->
+            <div class="text">
+              <input type="text" /><i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="submit">
+              <input type="submit" value="Search a topic" />
+            </div>
+          </form>
+        </div>
+      </header>
+      <section class="menuSection">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#goTo">Online Tutorials</a></li>
+          <li><a href="./tutor.html">Get a private tutor</a></li>
+          <li><a href="./mathsGame.html">Maths Game</a></li>
+          <li><a href="./signupForm.html">Sign up</a></li>
+          <li><a href="./contactForm.html" class="active">Contact us</a></li>
+        </ul>
+      </section>
+      <section class="signupSection">
+        <h2>Get in touch with us</h2>
+        <form action="./signupFormValidation.html">
+          <div>
+            <label for="firstname">Name :</label>
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder="joan"
+            />
+          </div>
+          <div>
+            <label for="email">Email :</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="jojo@yahoo.fr"
+            />
+          </div>
+          <div>
+            <label for="password">Your message :</label>
+            <textarea
+              class="message"
+              name="message"
+              id="message"
+              placeholder="tape your message here ..."
+            ></textarea>
+          </div>
+
+          <div>
+            <input type="checkbox" id="agreed" name="agreed" />
+            <label for="agreed"
+              >By checking this case, i agree to allow MathsTheFunWay to store
+              and process my personal data.
+            </label>
+          </div>
+          <div>
+            <input type="submit" value="Sign in" id="submit" disabled />
+          </div>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <p>Maths the Fun way, Copyright &copy; 2022</p>
+      </footer>
+    </div>
+    <script>
+      const submitBtn = document.getElementById("submit");
+      const checkbox = document.getElementById("agreed");
+      checkbox.addEventListener("change", function () {
+        if (this.checked) {
+          submitBtn.disabled = false;
+          submitBtn.classList.add("colorChange");
+        } else {
+          submitBtn.disabled = true;
+          submitBtn.classList.remove("colorChange");
+        }
+      });
+      function redirection() {
+        window.location.href =
+          "http://127.0.0.1:5500/html/signupFormValidation.html";
+      }
+    </script>
+  </body>
+</html>
