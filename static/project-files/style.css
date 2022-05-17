@@ -30,15 +30,11 @@ h1 {
 .table {
   margin-top: 7rem;
   color: #68829e /*!important*/;
-<<<<<<< HEAD
   margin: 4rem auto;
 }
 table a {
   color: #aebd38;
   text-decoration: none;
-=======
-  margin: 8rem auto;
->>>>>>> sorting
 }
 thead {
   background-color: #68829e;
