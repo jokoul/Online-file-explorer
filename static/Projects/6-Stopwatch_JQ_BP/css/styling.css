@@ -1,0 +1,124 @@
+/*GENERAL STYLE*/
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/cheetah-g818d7199f_1920.jpg") center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+/*TITLE*/
+#header {
+  text-align: center;
+  font-size: 7vw; /*vw unit correspond to 1% of width of the viewport therefore title fontsize become responsive*/
+}
+/*Lap Time*/
+#lap {
+  text-align: right;
+  font-size: 4vw;
+}
+/*TIME*/
+#time {
+  text-align: center;
+  font-size: 10vw;
+}
+/*Buttons*/
+#controlsContainer {
+  margin-bottom: 6rem;
+}
+.control {
+  color: white;
+  background-color: rgba(0, 4, 219, 0.8);
+  height: 10vw;
+  width: 10vw;
+  border-radius: 50%;
+  text-align: center;
+  padding: 20% 0;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
+.control:active {
+  background-color: #fff;
+  color: rgba(0, 4, 219, 0.8);
+}
+
+/*LAPS*/
+#laps {
+  max-height: 270px;
+  overflow-y: scroll;
+}
+
+.lap {
+  height: 4.5rem;
+  border-bottom: 2px solid #fff;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.laptimetitle {
+  font-size: 1.5em;
+  flex: 1;
+}
+
+.laptime {
+  flex: 5;
+  text-align: right;
+  font-size: 2em;
+}
+/*FOOTER STYLE */
+.footer {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(#f8f594, #d5d533);
+  background: -webkit-linear-gradient(#f8f594, #d5d533);
+  background: -moz-linear-gradient(#f8f594, #d5d533);
+  background: -o-linear-gradient(#f8f594, #d5d533);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+.footer p {
+  font-size: 1.2rem;
+  color: #5d12e7;
+  text-align: center;
+}
+footer div {
+  margin-left: 2rem;
+}
+.footer p a {
+  text-decoration: none;
+  color: #b314db;
+}
+.footer p a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footer ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #5d12e7;
+  margin-bottom: 1rem;
+}
+.footer ul li a {
+  color: #5d12e7;
+}
+.footer ul li {
+  transition: all 0.2s;
+  list-style-type: none;
+}
+.footer ul li:hover {
+  transform: scale(1.3);
+}
+@media screen and (max-width: 450px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+  footer div {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+}
