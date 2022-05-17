@@ -30,7 +30,7 @@ h1 {
 .table {
   margin-top: 7rem;
   color: #68829e /*!important*/;
-  margin: 4rem auto;
+  margin: 6rem auto;
 }
 table a {
   color: #aebd38;
@@ -75,6 +75,9 @@ tbody tr {
   border-radius: 10px;
   padding: 1rem;
   margin-top: 3rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .footer p {
   font-size: 1.2rem;
