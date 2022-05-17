@@ -30,9 +30,9 @@ h1 {
 .table {
   margin-top: 7rem;
   color: #68829e /*!important*/;
-  margin: 6rem auto;
+  margin: 4rem auto;
 }
-table a {
+.table a {
   color: #aebd38;
   text-decoration: none;
 }
@@ -75,9 +75,9 @@ tbody tr {
   border-radius: 10px;
   padding: 1rem;
   margin-top: 3rem;
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100%; */
 }
 .footer p {
   font-size: 1.2rem;
